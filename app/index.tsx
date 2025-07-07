@@ -9,8 +9,8 @@ export default function Index() {
       <Image className="absolute bottom-0 h-full" source={require('../assets/images/login-img.jpg')}></Image>
       <View className="w-[80%] mx-auto">
         <View className="">
-            <Text className="text-6xl mt-8 mb-2 text-center font-semibold text-black">Welcome</Text>
-            <Text className="tracking-wide mt-2 mb-5 text-center text-black">Sign in to your account</Text>
+          <Text className="text-6xl mt-8 mb-2 text-center font-semibold text-black">Welcome</Text>
+          <Text className="tracking-wide mt-2 mb-5 text-center text-black">Sign in to your account</Text>
         </View>
         <View>
           {/* First Input Container For User Email */}
