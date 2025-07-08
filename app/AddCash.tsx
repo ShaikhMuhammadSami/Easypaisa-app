@@ -9,13 +9,11 @@ export default function SendMoney() {
       <TextInput
         style={styles.input}
         placeholder="Recipient Name"
-        editable={false}
       />
       <TextInput
         style={styles.input}
         placeholder="Amount"
         keyboardType="numeric"
-        editable={false}
       />
       {/* <TextInput
         style={styles.input}

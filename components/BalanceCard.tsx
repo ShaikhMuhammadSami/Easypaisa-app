@@ -4,10 +4,11 @@ import { Link, router } from "expo-router";
 
 
 const BalanceCard = () => {
+
   return (
     <View className="bg-white rounded-2xl shadow-slate-300 shadow-2xl p-4 mt-4 mx-auto w-[90%] relative">
       {/* My Rewards Button */}
-      <TouchableOpacity className="absolute right-4 top-4 bg-yellow-400 px-3 py-1 rounded-full">
+      <TouchableOpacity className="absolute right-4 top-5 bg-yellow-400 px-3 py-1 rounded-full">
         <Text className="text-xs font-semibold">My Rewards</Text>
       </TouchableOpacity>
       {/* Logo and Balance */}

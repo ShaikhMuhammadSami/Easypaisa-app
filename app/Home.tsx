@@ -6,6 +6,7 @@ import MoreWithEasypaisa from '../components/MoreWithEasypaisa'
 import BottomTabBar from '../components/BottomTabBar'
 import React from 'react'
 
+
 const Home = () => {
   return (
     <View className='flex-1 bg-[#f6f6f6]'>
