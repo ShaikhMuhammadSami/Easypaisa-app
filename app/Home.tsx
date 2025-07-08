@@ -1,9 +1,10 @@
 import { View, ScrollView } from 'react-native'
-import Header from './components/Header'
-import BalanceCard from './components/BalanceCard'
-import QuickActions from './components/QuickActions'
-import MoreWithEasypaisa from './components/MoreWithEasypaisa'
-import BottomTabBar from './components/BottomTabBar'
+import Header from '../components/Header'
+import BalanceCard from '../components/BalanceCard'
+import QuickActions from '../components/QuickActions'
+import MoreWithEasypaisa from '../components/MoreWithEasypaisa'
+import BottomTabBar from '../components/BottomTabBar'
+import React from 'react'
 
 const Home = () => {
   return (

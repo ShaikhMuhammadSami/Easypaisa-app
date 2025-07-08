@@ -1,3 +1,4 @@
+import React from 'react';
 import { View, Text } from 'react-native';
 
 const tabs = [
@@ -8,7 +9,7 @@ const tabs = [
 ];
 
 const BottomTabBar = () => (
-  <View className="flex-row justify-between items-center bg-white px-4 py-2 border-t border-gray-200 absolute bottom-0 left-0 right-0">
+  <View className="flex-row justify-between items-center bg-white px-4 py-5 border-t border-gray-200 absolute bottom-0 left-0 right-0">
     {tabs.map((tab, idx) => (
       <View key={idx} className="flex-1 items-center">
         <View className="w-6 h-6 mb-1 rounded-full bg-gray-300" />

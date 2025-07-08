@@ -22,7 +22,7 @@ export default function SendMoney() {
         placeholder="Message (optional)"
         editable={false}
       /> */}
-      <TouchableOpacity style={styles.button} disabled>
+      <TouchableOpacity style={styles.button}>
         <Text style={styles.buttonText}>Send</Text>
       </TouchableOpacity>
     </View>

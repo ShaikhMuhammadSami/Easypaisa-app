@@ -1,3 +1,4 @@
+import React from 'react';
 import { View, Text } from 'react-native';
 
 const features = [
@@ -16,8 +17,8 @@ const features = [
 ];
 
 const MoreWithEasypaisa = () => (
-  <View className="bg-white mx-4 mt-4 rounded-2xl p-4">
-    <Text className="text-base font-bold text-gray-800 mb-2">More with Easypaisa</Text>
+  <View className="bg-white mx-4 mt-4 rounded-2xl p-4 mb-10">
+    <Text className="text-lg font-bold text-gray-800 mb-5">More with Easypaisa</Text>
     <View className="flex-row flex-wrap justify-between">
       {features.map((feature, idx) => (
         <View key={idx} className="w-1/4 items-center mb-6">
