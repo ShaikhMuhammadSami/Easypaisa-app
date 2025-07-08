@@ -38,7 +38,7 @@ export default function Index() {
             <Image source={require('../assets/images/arrow-2.png')} className="rounded-full w-[70px]"></Image>
           </TouchableOpacity>
         </View>
-          <Text className="text-center mt-40 font-semibold text-lg">Don’t have an account? <Text className="text-blue-700" onPress={() => router.push("/Signup")}> Sign up </Text></Text>
+          <Text className="text-center mt-40 font-semibold text-lg">Don't have an account? <Text className="text-blue-700" onPress={() => router.push("/Signup")}> Sign up </Text></Text>
         </View>
       </View>
   </SafeAreaView>
