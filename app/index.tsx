@@ -1,8 +1,30 @@
 import { router } from "expo-router";
-import React from "react";
-import { Text, View,SafeAreaView,Image, TextInput, TouchableOpacity } from "react-native";
+import React, { useState } from "react";
+import { Text, View, SafeAreaView, Image, TextInput, TouchableOpacity } from "react-native";
+import { query, where, getDocs } from "firebase/firestore";
+import { collection } from "firebase/firestore";
+import { db } from "../firebase.config";
+
 
 export default function Index() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+
+
+  const checkUser = async () => {
+    const q = query(collection(db, "users"), where("userEmail", "==", email), where("userPassword", "==", password));
+    const snapshot = await getDocs(q);
+    
+    if (!snapshot.empty) {
+      router.push("/Home");
+      setEmail("");
+      setPassword("");
+    }else{
+      setError("Invalid email or password");
+      setTimeout(() => setError(""), 3000);
+    }
+  }
 
   return (
     <SafeAreaView className="relative h-full flex justify-center items-center">
@@ -19,6 +41,8 @@ export default function Index() {
           <TextInput className="w-[70%]"
           placeholder="Enter Your Email"
           keyboardType="email-address"
+          value={email}
+          onChangeText={setEmail}
           >
           </TextInput>
         </View>
@@ -28,13 +52,17 @@ export default function Index() {
           <TextInput className="w-[70%]"
           placeholder="******"
           secureTextEntry={true}
+          value={password}
+          onChangeText={setPassword}
           >
           </TextInput>
         </View>
+        {error ? <Text className="text-center text-red-500 mt-2">{error}</Text> : null}
+
         <Text className="text-right text-[#847f7f] pr-4 mt-5">Forgot your password?</Text>
         <View className="flex-row items-center justify-end mt-20 gap-4">
           <Text className="text-3xl font-bold">Sign in</Text>
-          <TouchableOpacity onPress={() => router.push("/Home")}>
+          <TouchableOpacity onPress={checkUser}>
             <Image source={require('../assets/images/arrow-2.png')} className="rounded-full w-[70px]"></Image>
           </TouchableOpacity>
         </View>
